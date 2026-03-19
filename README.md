@@ -28,11 +28,11 @@
  },
  "areaServed": [
    "Waterbury CT",
-   "Bristol CT",
+   "Southbury CT",
    "Naugatuck CT",
    "Meriden CT",
-   "New Haven CT",
-   "Hartford CT",
+   "Watertown CT",
+   "Oxford CT",
    "Milford CT"
  ]
 }
@@ -49,7 +49,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ANIMATED CYBER BACKGROUND */
+/* ANIMATED CYBER BACKGOROUND */
 body::before {
   content: "";
   position: fixed;
@@ -370,7 +370,7 @@ body::after {
 <!-- SERVICE AREAS -->
 <section id="areas" class="container">
   <h2>Service Areas</h2>
-  <p>Waterbury • Bristol • Naugatuck • Meriden • New Haven • Hartford • Milford</p>
+  <p>Waterbury • Southbury • Naugatuck • Meriden • Watertown • Oxford • Milford</p>
 </section>
 
 <!-- MAP -->
