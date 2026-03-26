@@ -349,13 +349,44 @@ body::after {
 <!-- BOOKING -->
 <section id="booking" class="container">
   <h2>Book a Service</h2>
-  <form id="serviceForm" action="[formsubmit.co](https://formsubmit.co/el/woguro)" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input class="form-input" name="name" placeholder="Name" required><br><br>
-    <input class="form-input" name="phone" placeholder="Phone Number" required><br><br>
-    <textarea class="form-input" name="problem" placeholder="Describe the problem" required></textarea><br><br>
-    <button type="submit" class="support-btn">Submit Request</button>
-  </form>
+  <form action="https://formsubmit.co/robert@onyxtechsolutions.info" method="POST">
+
+  <!-- Disable captcha -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="New Service Request - OnyxTech Solutions">
+
+  <!-- Auto response to customer -->
+  <input type="hidden" name="_autoresponse" value="Thanks for contacting OnyxTech Solutions! We received your request and will get back to you shortly.">
+
+  <!-- Optional redirect after submit -->
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+  <!-- Name -->
+  <label for="name">Full Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <!-- Email -->
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <!-- Phone -->
+  <label for="phone">Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" required><br><br>
+
+  <!-- Problem Description -->
+  <label for="message">Describe the Problem:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+  <!-- Spam protection -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Submit -->
+  <button type="submit">Request Service</button>
+
+</form>
+  
 </section>
 
 <!-- REMOTE SUPPORT -->
