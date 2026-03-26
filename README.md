@@ -349,7 +349,7 @@ body::after {
 <!-- BOOKING -->
 <section id="booking" class="container">
   <h2>Book a Service</h2>
-  <form id="serviceForm" action="[formsubmit.co](https://formsubmit.co/robert@onyxtechsolutions.info)" method="POST">
+  <form id="serviceForm" action="[formsubmit.co](https://formsubmit.co/el/woguro)" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input class="form-input" name="name" placeholder="Name" required><br><br>
     <input class="form-input" name="phone" placeholder="Phone Number" required><br><br>
