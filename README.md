@@ -401,10 +401,7 @@ style="margin-top:30px;">
 </section>
 
 <!-- MAP -->
-<section class="container">
-  <h2>Service Location</h2>
-  <iframe src="[google.com](https://www.google.com/maps?q=Waterbury+Connecticut & output=embed)"
-  width="100%" height="350" style="border:0;" loading="lazy"></iframe>
+>
 </section>
 
 <!-- CONTACT -->
