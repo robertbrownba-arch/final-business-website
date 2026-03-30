@@ -349,43 +349,13 @@ body::after {
 <!-- BOOKING -->
 <section id="booking" class="container">
   <h2>Book a Service</h2>
-
-  <form id="serviceForm" action="https://formsubmit.co/robert@onyxtechsolutions.info" method="POST" style="margin-top:30px;">
-
-    <!-- Hidden Config -->
+  <form id="serviceForm" action="[formsubmit.co](https://formsubmit.co/robert@onyxtechsolutions.info)" method="POST">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Service Request - OnyxTech Solutions">
-    <input type="hidden" name="_autoresponse" value="Thanks for contacting OnyxTech Solutions! We received your request and will get back to you shortly.">
-    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-    <input type="text" name="_honey" style="display:none">
-
-    <!-- Name -->
-    <input class="form-input" type="text" name="name" placeholder="Full Name" required><br><br>
-
-    <!-- Email -->
-    <input class="form-input" type="email" name="email" placeholder="Email Address" required><br><br>
-
-    <!-- Phone -->
-    <input class="form-input" type="tel" name="phone" placeholder="Phone Number" required><br><br>
-
-    <!-- Service Type -->
-    <select class="form-input" name="service" required>
-      <option value="">Select Service Needed</option>
-      <option>Computer Repair</option>
-      <option>Virus Removal</option>
-      <option>Network Setup</option>
-      <option>Hard Drive Recovery</option>
-      <option>POS System Service</option>
-    </select><br><br>
-
-    <!-- Message -->
-    <textarea class="form-input" name="message" rows="5" placeholder="Describe the issue..." required></textarea><br><br>
-
-    <!-- Submit -->
-    <button class="support-btn" type="submit">Request Service</button>
-
+    <input class="form-input" name="name" placeholder="Name" required><br><br>
+    <input class="form-input" name="phone" placeholder="Phone Number" required><br><br>
+    <textarea class="form-input" name="problem" placeholder="Describe the problem" required></textarea><br><br>
+    <button type="submit" class="support-btn">Submit Request</button>
   </form>
-
 </section>
 
 <!-- REMOTE SUPPORT -->
@@ -444,4 +414,6 @@ document.getElementById("serviceForm").addEventListener("submit", function() {
 </script>
 
 </body>
-</html>
+</html> 
+
+<!-- 
