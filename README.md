@@ -1,4 +1,4 @@
-<!DOCTYPE html>logo.png
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -391,8 +391,6 @@ style="margin-top:30px;">
 </section>
 
 <!-- REMOTE SUPPORT -->
-
-</section>
 
 <!-- SERVICE AREAS -->
 <section id="areas" class="container">
