@@ -6,37 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Computer Repair Waterbury CT | OnyxTech Solutions</title>
-<meta name="description" content="OnyxTech Solutions L.L.C. provides computer repair, networking, POS systems, virus removal, and IT services in Waterbury Connecticut.">
+<meta name="description" content="OnyxTech Solutions provides computer repair, networking, POS systems, and virus removal in Waterbury CT and surrounding areas.">
 
-<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap)" rel="stylesheet">
-
-<!-- LOCAL BUSINESS SEO -->
-<script type="application/ld+json">
-{
- "@context": "[schema.org](https://schema.org)",
- "@type": "LocalBusiness",
- "name": "OnyxTech Solutions L.L.C.",
- "url": "[onyxtechsolutions.info](https://onyxtechsolutions.info)",
- "telephone": "+1-203-819-8645",
- "email": "robert@onyxtechsolutions.info",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Waterbury",
-   "addressRegion": "CT",
-   "postalCode": "06704",
-   "addressCountry": "US"
- },
- "areaServed": [
-   "Waterbury CT",
-   "Southbury CT",
-   "Naugatuck CT",
-   "Meriden CT",
-   "Watertown CT",
-   "Oxford CT",
-   "Milford CT"
- ]
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -44,198 +16,166 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #02050d;
+  background: linear-gradient(135deg, #02050d, #050814);
   color: white;
   overflow-x: hidden;
 }
 
-/* ANIMATED CYBER BACKGOROUND */
+/* CIRCUIT BACKGROUND */
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 200%; height: 200%;
+  width: 200%;
+  height: 200%;
   background-image:
-    linear-gradient(rgba(0,255,255,0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,255,0.15) 1px, transparent 1px),
-    radial-gradient(circle at 20% 30%, #00ffff55 2px, transparent 3px),
-    radial-gradient(circle at 60% 70%, #00ffff55 2px, transparent 3px),
-    radial-gradient(circle at 80% 40%, #00ffff55 2px, transparent 3px),
-    radial-gradient(circle at 40% 80%, #00ffff55 2px, transparent 3px);
-  background-size:
-    60px 60px,
-    60px 60px,
-    300px 300px,
-    400px 400px,
-    350px 350px,
-    450px 450px;
-  opacity: 0.25;
-  animation: circuitMove 35s linear infinite;
+    linear-gradient(rgba(0,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveBG 30s linear infinite;
   z-index: -1;
 }
 
-@keyframes circuitMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-400px, -600px); }
-}
-
-/* OVERLAY GLOW */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle at center, #00ffff10, transparent 70%);
-  pointer-events: none;
+@keyframes moveBG {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-400px,-400px); }
 }
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
-  top: 0;
-  background: #050814;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 30px;
+  background: #050814;
   border-bottom: 1px solid #00ffff33;
-  z-index: 1000;
+  position: relative;
 }
-.logo {
-  font-family: 'Orbitron';
-  color: #00ffff;
-  font-weight: bold;
+
+/* GLOW LINE */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  box-shadow: 0 0 10px #00ffff;
 }
+
+/* LOGO */
+.logo img {
+  height: 50px;
+  filter: drop-shadow(0 0 8px #00ffff) drop-shadow(0 0 15px #00ffff55);
+  animation: logoPulse 3s infinite;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes logoPulse {
+  0% { filter: drop-shadow(0 0 5px #00ffff); }
+  50% { filter: drop-shadow(0 0 20px #00ffff); }
+  100% { filter: drop-shadow(0 0 5px #00ffff); }
+}
+
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
 }
+
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
+
 .nav-links a:hover {
   color: #00ffff;
 }
 
+/* SECTIONS */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+  border-top: 1px solid #00ffff22;
+}
+
+.section h2 {
+  font-family: Orbitron;
+  color: #00ffff;
+}
+
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
 .hero h1 {
-  font-family: 'Orbitron';
-  font-size: 40px;
+  font-size: 38px;
   color: #00ffff;
 }
-.hero p {
-  max-width: 600px;
-  margin: auto;
-}
+
 .hero-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
   background: #00ffff;
   color: black;
-  font-weight: bold;
-  border-radius: 6px;
+  padding: 12px 25px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-/* CERT BADGES */
-.badge {
-  border: 1px solid #00ffff;
-  padding: 6px 12px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 6px;
-  color: #00ffff;
-}
-.certs {
-  margin-top: 20px;
-}
-
-/* SERVICES */
-.services {
+/* GRID */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 60px 40px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  max-width: 1100px;
   margin: auto;
 }
-.service-card {
+
+/* CARDS */
+.card {
   background: #0b0f1c;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
-  border: 1px solid #0ff3;
-  transition: .3s;
-}
-.service-card:hover {
-  transform: translateY(-10px);
-  border-color: #00ffff;
-  box-shadow: 0 0 25px #00ffff55;
-}
-.service-card h3 {
-  font-family: 'Orbitron';
-  color: #00ffff;
+  border: 1px solid #00ffff22;
+  transition: 0.3s;
 }
 
-/* CONTAINERS */
-.container {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ffff55;
 }
 
-/* BUTTONS */
-.support-btn {
-  padding: 12px 20px;
-  margin: 10px;
-  background: #00ffff;
-  border: none;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.support-btn:hover {
-  background: white;
-  color: black;
-}
-
-/* FORM FIELDS */
-.form-input {
+/* FORM */
+input, textarea, select {
   width: 100%;
-  max-width: 500px;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #00ffff55;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
   background: #0b0f1c;
+  border: 1px solid #00ffff33;
   color: white;
 }
 
-/* SMS FLOATING BUTTON */
-.sms-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+button {
   background: #00ffff;
-  color: black;
-  padding: 14px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px #00ffff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+/* MAP */
+iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  margin-top: 20px;
 }
 
 /* MOBILE */
-@media(max-width:768px) {
-  .nav-links { display: none; }
-  .hero h1 { font-size: 28px; }
+@media(max-width:768px){
+  .nav-links { display:none; }
 }
 
 </style>
@@ -245,192 +185,125 @@ body::after {
 
 <!-- NAV -->
 <nav class="navbar">
-  <div class="logo">ONYXTECH SOLUTIONS</div>
+  <div class="logo">
+    <img src="logo.png" alt="OnyxTech Solutions Logo">
+  </div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#quote">Instant Quote</a></li>
-    <li><a href="#booking">Book Service</a></li>
-    <li><a href="#remote">Remote Support</a></li>
-    <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#booking">Book</a></li>
+    <li><a href="#areas">Areas</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Professional IT & Computer Repair</h1>
-  <p>Expert computer repair, networking, POS systems, and IT services in Waterbury Connecticut.</p>
-  
-  <div class="certs">
-    <span class="badge">Network+</span>
-    <span class="badge">Security+</span>
-    <span class="badge">LEFT Certified</span>
+<section class="section hero">
+  <h1>OnyxTech Solutions L.L.C.</h1>
+  <p>Professional Computer Repair & IT Services in Waterbury CT</p>
+
+  <p>Network+ • Security+ • BBB Accredited</p>
+
+  <br>
+  <a href="#booking" class="hero-btn">Book Service</a>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section">
+  <h2>Certifications & Memberships</h2>
+
+  <div class="grid">
+    <div class="card">CompTIA Network+</div>
+    <div class="card">CompTIA Security+</div>
+    <div class="card">Retail IT Field Technician</div>
+    <div class="card">Better Business Bureau</div>
+    <div class="card">Waterbury Chamber</div>
+    <div class="card">Milford Chamber</div>
   </div>
-
-  <a class="hero-btn" href="#booking">Book Service</a>
 </section>
-
-<section>
-
-<h2>Certifications & Memberships</h2>
-
-<div class="grid">
-
-<div class="card">CompTIA Network+</div>
-<div class="card">CompTIA Security+</div>
-<div class="card">Retail Infrastructure Field Technician Experience</div>
-<div class="card">Waterbury Chamber Member</div>
-<div class="card">Milford Chamber Member</div>
-
-</div>
-
-</section>
-
 
 <!-- SERVICES -->
-<section id="services" class="services">
+<section id="services" class="section">
+  <h2>Services</h2>
 
-  <div class="service-card">
-    <h3>Computer Repair</h3>
-    <ul>
-      <li>Desktop & Laptop Repair</li>
-      <li>Gaming System Repair</li>
-      <li>Tablet & Phone Repair</li>
-      <li>Custom PC Builds</li>
-    </ul>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Computer Repair</h3>
+      <p>PC, Gaming, Tablet, Phone, Builds</p>
+    </div>
+
+    <div class="card">
+      <h3>POS Systems</h3>
+      <p>Install, Repair, Self Checkout, Printers</p>
+    </div>
+
+    <div class="card">
+      <h3>Networking</h3>
+      <p>CAT6, Access Points, MDF, Cradlepoint</p>
+    </div>
+
+    <div class="card">
+      <h3>Security & Data</h3>
+      <p>Virus Removal, Hard Drive, Optimization</p>
+    </div>
+
   </div>
-
-  <div class="service-card">
-    <h3>Commercial POS Systems</h3>
-    <ul>
-      <li>POS Installation</li>
-      <li>Self Checkout Systems</li>
-      <li>Lexmark Printers</li>
-      <li>IP Cameras</li>
-    </ul>
-  </div>
-
-  <div class="service-card">
-    <h3>Networking</h3>
-    <ul>
-      <li>CAT6 Installation</li>
-      <li>Access Points</li>
-      <li>MDF / IDF Setup</li>
-      <li>Cradlepoint Routers</li>
-    </ul>
-  </div>
-
-  <div class="service-card">
-    <h3>Security & Data</h3>
-    <ul>
-      <li>Virus Removal</li>
-      <li>Malware Cleanup</li>
-      <li>Hard Drive Recovery</li>
-      <li>System Optimization</li>
-    </ul>
-  </div>
-
 </section>
 
 <!-- QUOTE -->
-<section id="quote" class="container">
-  <h2>Instant Quote Calculator</h2>
-  <select id="service" class="support-btn">
-    <option value="">Select Service</option>
-    <option value="120">Computer Repair - $120</option>
-    <option value="100">Virus Removal - $100</option>
-    <option value="200">Network Setup - $200</option>
-    <option value="150">Hard Drive Recovery - $150</option>
-    <option value="250">POS Repair - $250</option>
+<section class="section">
+  <h2>Instant Quote</h2>
+
+  <select id="service">
+    <option value="">Select</option>
+    <option value="120">Computer Repair</option>
+    <option value="100">Virus Removal</option>
+    <option value="200">Networking</option>
   </select>
-  <button class="support-btn" onclick="calc()">Calculate</button>
-  <p id="price" style="color:#00ffff;font-size:20px;"></p>
+
+  <button onclick="calc()">Calculate</button>
+  <p id="price"></p>
 </section>
 
 <!-- BOOKING -->
-<section id="booking" class="container">
-  <h2>Book a Service</h2>
+<section id="booking" class="section">
+  <h2>Book Service</h2>
+
   <form action="https://formsubmit.co/robert@onyxtechsolutions.info" method="POST">
+    <input type="hidden" name="_captcha" value="false">
 
-  <!-- Disable captcha -->
-  <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone" required>
 
-  <!-- Email subject -->
-  <input type="hidden" name="_subject" value="New Service Request - OnyxTech Solutions">
+    <textarea name="message" placeholder="Describe issue"></textarea>
 
-  <!-- Auto response to customer -->
-  <input type="hidden" name="_autoresponse" value="Thanks for contacting OnyxTech Solutions! We received your request and will get back to you shortly.">
-
-  <!-- Optional redirect after submit -->
-  <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-
-  <!-- Name -->
-  <label for="name">Full Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-
-  <!-- Email -->
-  <label for="email">Email Address:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <!-- Phone -->
-  <label for="phone">Phone Number:</label><br>
-  <input type="tel" id="phone" name="phone" required><br><br>
-
-  <!-- Problem Description -->
-  <label for="message">Describe the Problem:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-  <!-- Spam protection -->
-  <input type="text" name="_honey" style="display:none">
-
-  <!-- Submit -->
-  <button type="submit">Request Service</button>
-
-</form>
-  
+    <button type="submit">Submit</button>
+  </form>
 </section>
 
-<!-- REMOTE SUPPORT -->
-
-<!-- SERVICE AREAS -->
-<section id="areas" class="container">
+<!-- SERVICE AREA -->
+<section id="areas" class="section">
   <h2>Service Areas</h2>
-  <p>Waterbury • Southbury • Naugatuck • Meriden • Watertown • Oxford • Milford</p>
+
+  <p>Waterbury • Naugatuck • Meriden • Watertown • Oxford • Milford</p>
+
+  <iframe src="https://maps.google.com/maps?q=Waterbury%20CT&z=10&output=embed"></iframe>
 </section>
-
-<!-- MAP -->
-
 
 <!-- CONTACT -->
-<section id="contact" class="container">
+<section class="section">
   <h2>Contact</h2>
-  <p>Phone: <a href="tel:+12038198645" style="color:#00ffff;">203-819-8645</a></p>
-  <p>Email: <a href="mailto:robert@onyxtechsolutions.info" style="color:#00ffff;">robert@onyxtechsolutions.info</a></p>
-  <p>Serving Waterbury, Milford, and surrounding Connecticut areas.</p>
+
+  <p>📞 203-819-8645</p>
+  <p>✉️ robert@onyxtechsolutions.info</p>
 </section>
 
-<!-- SMS BUTTON -->
-<a href="sms:+12038198645" class="sms-button">Text Us</a>
-
-<footer style="text-align:center;padding:20px;">
-  © OnyxTech Solutions L.L.C.
-</footer>
-
 <script>
-/* QUOTE CALCULATOR */
-function calc() {
-  let service = document.getElementById("service").value;
+function calc(){
+  let val = document.getElementById("service").value;
   document.getElementById("price").innerText =
-    service ? "Estimated Price: $" + service : "";
+    val ? "Estimated: $" + val : "";
 }
-
-/* SMS AUTO CONFIRMATION */
-document.getElementById("serviceForm").addEventListener("submit", function() {
-  let phone = document.querySelector('[name="phone"]').value;
-  let message = encodeURIComponent("Hi, we received your service request. We'll contact you shortly! - OnyxTech Solutions");
-  setTimeout(() => {
-    window.location.href = "sms:" + phone + "?body=" + message;
-  }, 1000);
-});
 </script>
 
 </body>
