@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -66,7 +66,7 @@ height:40px;
 margin-right:10px;
 }
 
-/* NAV HOVER EFFECT */
+/* NAV HOVER + ACTIVE */
 nav a{
 color:white;
 text-decoration:none;
@@ -76,6 +76,10 @@ position:relative;
 }
 
 nav a:hover{
+color:#00ffff;
+}
+
+nav a.active{
 color:#00ffff;
 }
 
@@ -109,7 +113,7 @@ font-size:42px;
 color:#ccc;
 }
 
-/* BUTTON HOVER */
+/* BUTTON */
 button{
 background:#00ffff;
 border:none;
@@ -118,6 +122,8 @@ border-radius:6px;
 cursor:pointer;
 font-weight:bold;
 transition:0.3s;
+position:relative;
+overflow:hidden;
 }
 
 button:hover{
@@ -125,11 +131,22 @@ transform:scale(1.05);
 box-shadow:0 0 15px #00ffff;
 }
 
+button:active{
+transform:scale(0.95);
+}
+
 /* SECTIONS */
 section{
 padding:60px 20px;
 max-width:1000px;
 margin:auto;
+transition:0.4s;
+}
+
+section.active{
+transform:scale(1.01);
+box-shadow:0 0 30px #00ffff22;
+border-radius:10px;
 }
 
 h2{
@@ -144,18 +161,23 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARD HOVER EFFECT */
+/* CARD */
 .card{
 background:#0f1629;
 padding:20px;
 border-radius:10px;
 border:1px solid #00ffff33;
 transition:0.3s;
+cursor:pointer;
 }
 
 .card:hover{
 transform:translateY(-8px) scale(1.03);
 box-shadow:0 0 20px #00ffff44;
+}
+
+.card:active{
+transform:scale(0.97);
 }
 
 /* FORMS */
@@ -176,39 +198,20 @@ box-shadow:0 0 10px #00ffff44;
 outline:none;
 }
 
-/* CHATBOT */
-.chatbot{
-position:fixed;
-bottom:20px;
-right:20px;
-width:300px;
-background:#0f1629;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 0 15px #00ffff44;
+/* RIPPLE EFFECT */
+.ripple{
+position:absolute;
+border-radius:50%;
+transform:scale(0);
+animation:ripple 0.6s linear;
+background:rgba(0,255,255,0.4);
 }
 
-.chat-header{
-background:#00ffff;
-color:black;
-padding:10px;
-font-weight:bold;
+@keyframes ripple{
+to{
+transform:scale(4);
+opacity:0;
 }
-
-.chat-body{
-height:200px;
-overflow-y:auto;
-padding:10px;
-font-size:14px;
-}
-
-.chat-input{
-display:flex;
-}
-
-.chat-input input{
-flex:1;
-border:none;
 }
 
 /* FOOTER */
@@ -285,33 +288,29 @@ OnyxTech Solutions
 <p id="price"></p>
 </section>
 
-<!-- BOOKING (LABEL 2 APPLIED) -->
-<section id="booking" class="container">
+<section id="booking">
 <h2>Book a Service</h2>
 
 <form action="https://formsubmit.co/robert@onyxtechsolutions.info" method="POST">
-
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Service Request - OnyxTech Solutions">
 <input type="hidden" name="_autoresponse" value="Thanks for contacting OnyxTech Solutions! We received your request and will get back to you shortly.">
-<input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
 
 <label>Full Name:</label>
 <input type="text" name="name" required>
 
-<label>Email Address:</label>
+<label>Email:</label>
 <input type="email" name="email" required>
 
-<label>Phone Number:</label>
+<label>Phone:</label>
 <input type="tel" name="phone" required>
 
-<label>Describe the Problem:</label>
-<textarea name="message" rows="5" required></textarea>
+<label>Problem:</label>
+<textarea name="message" required></textarea>
 
 <input type="text" name="_honey" style="display:none">
 
 <button type="submit">Request Service</button>
-
 </form>
 </section>
 
@@ -325,15 +324,14 @@ OnyxTech Solutions
 
 <section>
 <h2>Service Area</h2>
-<iframe src="https://maps.google.com/maps?q=waterbury%20ct&t=&z=11&ie=UTF8&iwloc=&output=embed"
-width="100%" height="350" style="border:0;border-radius:10px"></iframe>
+<iframe src="https://maps.google.com/maps?q=waterbury%20ct&t=&z=11&output=embed"
+width="100%" height="350" style="border-radius:10px"></iframe>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
 <p>Phone: 203-800-8258</p>
 <p>Email: support@onyxtechsolutions.com</p>
-<p>Serving Waterbury, Milford and surrounding Connecticut areas.</p>
 </section>
 
 <footer>
@@ -342,18 +340,64 @@ width="100%" height="350" style="border:0;border-radius:10px"></iframe>
 
 <script>
 
-/* smooth scroll */
+/* SCROLL */
 function scrollToBooking(){
 document.getElementById("booking").scrollIntoView({behavior:"smooth"})
 }
 
-/* calculator */
+/* CALCULATOR */
 function calc(){
 let price=document.getElementById("service").value
 document.getElementById("price").innerHTML="Estimated Cost: $"+price
 }
 
+/* RIPPLE */
+document.addEventListener("click", function(e){
+let ripple=document.createElement("span");
+ripple.classList.add("ripple");
+
+let rect=e.target.getBoundingClientRect();
+ripple.style.left=(e.clientX-rect.left)+"px";
+ripple.style.top=(e.clientY-rect.top)+"px";
+
+e.target.appendChild(ripple);
+
+setTimeout(()=>ripple.remove(),600);
+});
+
+/* ACTIVE SECTION */
+let sections=document.querySelectorAll("section");
+let navLinks=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+let current="";
+sections.forEach(sec=>{
+if(scrollY >= sec.offsetTop-120){
+current=sec.getAttribute("id");
+}
+sec.classList.remove("active");
+});
+
+if(current){
+document.getElementById(current).classList.add("active");
+}
+
+navLinks.forEach(link=>{
+link.classList.remove("active");
+if(link.getAttribute("href")==="#"+current){
+link.classList.add("active");
+}
+});
+});
+
+/* PARALLAX */
+document.addEventListener("mousemove",(e)=>{
+let x=(e.clientX/window.innerWidth)*20;
+let y=(e.clientY/window.innerHeight)*20;
+document.body.style.backgroundPosition=`${x}px ${y}px`;
+});
+
 </script>
 
 </body>
-</html>    
+</html>
