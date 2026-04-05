@@ -286,8 +286,6 @@ OnyxTech Solutions
 <option value="150">Hard Drive Recovery - $150</option>
 <option value="250">POS Repair - $250</option>
 </select>
-<button onclick="calc()">Calculate</button>
-<p id="price"></p>
 </section>
 <button class="support-btn" onclick="calc()">Calculate</button>
 <p id="price" style="color:#00ffff;font-size:20px;"></p>
