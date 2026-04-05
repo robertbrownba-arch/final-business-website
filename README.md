@@ -276,6 +276,10 @@ OnyxTech Solutions
 </section>
 
 <section>
+ <!-- QUOTE -->
+<section id="quote" class="container">
+  <h2>Instant Quote Calculator</h2>
+  <select id="service" class="support-btn">
 <h2>Instant Quote Calculator</h2>
 <select id="service">
 <option value="120">Computer Repair - $120</option>
