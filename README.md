@@ -278,11 +278,11 @@ OnyxTech Solutions
 <section>
 <h2>Instant Quote Calculator</h2>
 <select id="service">
-<option value="120">Computer Repair $120</option>
-<option value="100">Virus Removal $100</option>
-<option value="200">Network Setup $200</option>
-<option value="150">Hard Drive Recovery $150</option>
-<option value="250">POS Repair $250</option>
+<option value="120">Computer Repair - $120</option>
+<option value="100">Virus Removal - $100</option>
+<option value="200">Network Setup - $200</option>
+<option value="150">Hard Drive Recovery - $150</option>
+<option value="250">POS Repair - $250</option>
 </select>
 <button onclick="calc()">Calculate</button>
 <p id="price"></p>
