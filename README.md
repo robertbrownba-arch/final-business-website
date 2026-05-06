@@ -256,7 +256,6 @@ OnyxTech Solutions
 <div class="card">CompTIA Network+</div>
 <div class="card">CompTIA Security+</div>
 <div class="card">Retail Infrastructure Field Technician Experience</div>
-<div class="card">Better Business Bureau Member</div>
 <div class="card">Waterbury Chamber Member</div>
 <div class="card">Milford Chamber Member</div>
 </div>
