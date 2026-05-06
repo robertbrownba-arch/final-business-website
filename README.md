@@ -254,6 +254,10 @@ OnyxTech Solutions
 </section>
 
 <section>
+  <img src="images/onyx-hero-bg.png" class="feature-image">
+</section>
+
+<section>
 <h2>Certifications & Memberships</h2>
 <div class="grid">
 <div class="card">CompTIA Network+</div>
