@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <section>
-  <img src="images/onyx-hero-bg.png" class="feature-image">
-</section>
 
 
 <meta charset="UTF-8">
